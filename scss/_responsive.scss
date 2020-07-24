@@ -1,0 +1,300 @@
+@media (max-width: 1024px) {
+  .lead {
+    width: 80%;
+  }
+  #home {
+    .navbar {
+      justify-content: space-between;
+      padding: 2rem 4rem;
+      font-size: 1.2rem;
+
+      .items {
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        position: fixed;
+        color: $primary;
+        background: #fff;
+        padding: 2rem;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+      }
+
+      .active {
+        opacity: 1;
+        width: 50%;
+
+        .item {
+          padding: 1rem;
+
+          a:hover {
+            color: $font-dark;
+          }
+          a:hover::after {
+            width: 0;
+          }
+        }
+
+        .item:last-child {
+          margin: 0;
+        }
+      }
+
+      .burger {
+        display: block;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .toggle {
+        .line1 {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .line2 {
+          opacity: 0;
+        }
+        .line3 {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+    .showcase {
+      max-height: 100vh;
+      h1 {
+        font-size: 3rem;
+        padding: 0 0.5rem;
+      }
+
+      .video-container {
+        video {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  // about section
+
+  #about {
+    padding: 3rem;
+    .counters {
+      flex-direction: column;
+
+      .counter {
+        margin: 1rem 6rem;
+      }
+    }
+
+    .start {
+      grid-template-columns: repeat(1, 1fr);
+
+      .start-img {
+        text-align: left;
+        margin: 0 2rem;
+      }
+    }
+  }
+
+  // classe section
+
+  #classes {
+    .classes-images {
+      transform: translate(-50%);
+
+      .img-slider {
+        min-width: 50%;
+      }
+    }
+  }
+
+  // schedule section
+
+  #schedule {
+    ul {
+      font-size: 1rem;
+    }
+    .tables-container {
+      width: 70%;
+      margin: auto;
+      .table {
+        td {
+          font-size: 1rem;
+          padding: 0.25rem 2rem;
+        }
+      }
+    }
+  }
+
+  // trainer section
+
+  #trainers {
+    .trainers {
+      flex-direction: column;
+    }
+  }
+
+  // services section
+
+  #services {
+    .services-slider {
+      .slide-wrap {
+        transform: translate(-50%);
+
+        .slide-card {
+          min-width: 44%;
+        }
+      }
+    }
+  }
+
+  // contacts section
+
+  #contact {
+    width: 100%;
+    margin: 3rem;
+    .form-container {
+      .full-name {
+        flex-direction: column;
+        margin: 0;
+        input {
+          width: 100%;
+          margin: 0.5rem 0;
+        }
+      }
+
+      .btn-dark {
+        width: 100%;
+      }
+    }
+  }
+
+  // footer
+  #footer {
+    .footer-container {
+      grid-template-columns: repeat(1, 1fr);
+
+      .footer-nav {
+        margin-left: 0;
+      }
+    }
+
+    .subscribe {
+      input:first-child {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .lead {
+    width: 100%;
+  }
+  #home {
+    .navbar {
+      padding: 3rem;
+      .active {
+        width: 70%;
+      }
+    }
+    .showcase {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  // about section
+
+  #about {
+    padding: 2rem;
+    .counters {
+      .counter {
+        margin: 1rem 3rem;
+      }
+    }
+    .start {
+      .start-img {
+        margin: 0 1.5rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // classes section
+
+  #classes {
+    .classes-images {
+      transform: translate(-100%);
+
+      .img-slider {
+        min-width: 100%;
+      }
+    }
+  }
+
+  // #schedule section
+
+  #schedule {
+    ul {
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+
+      li {
+        margin: 0.25rem;
+      }
+    }
+
+    .tables-container {
+      width: 90%;
+
+      .table {
+        td {
+          font-size: 0.9rem;
+          padding: 0.2rem;
+        }
+      }
+    }
+  }
+
+  // traniers section
+
+  #trainers {
+    .trainers {
+      margin-left: 3rem;
+    }
+  }
+
+  // services section
+
+  #services {
+    .services-slider {
+      .slide-wrap {
+        transform: translate(-100%);
+
+        .slide-card {
+          min-width: 88%;
+        }
+      }
+    }
+  }
+
+  #contact {
+    margin: 2rem;
+  }
+
+  #footer {
+    .subscribe {
+      input:first-child {
+        width: 65%;
+      }
+    }
+  }
+}

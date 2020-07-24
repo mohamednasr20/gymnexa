@@ -1,0 +1,49 @@
+.container {
+  margin: auto;
+  max-width: 1250px;
+  text-align: center;
+}
+
+.heading {
+  color: $primary;
+  line-height: 1.2;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 2px 0 $primary;
+  letter-spacing: 2px;
+}
+
+.lead {
+  color: $font-dark;
+  width: 50%;
+}
+
+.btn {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-light {
+  @extend .btn;
+  color: $primary;
+  border: 2px solid $primary;
+}
+
+.btn-dark {
+  @extend .btn;
+  color: $dark-bg;
+  background: $primary;
+}
+
+.btn-light:hover {
+  color: $dark-bg;
+  background: $primary;
+}
+
+.btn-dark:hover {
+  color: $primary;
+  background: none;
+  border: 2px solid $primary;
+}

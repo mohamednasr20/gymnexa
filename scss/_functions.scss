@@ -1,0 +1,50 @@
+// box shadow mixin
+
+@mixin box-shadow($x, $y, $blur, $s, $c) {
+  -webkit-box-shadow: $x $y $blur $s $c;
+  -mos-box-shadow: $x $y $blur $s $c;
+  -ms-box-shadow: $x $y $blur $s $c;
+  box-shadow: $x $y $blur $s $c;
+}
+
+// set text color
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// padding
+
+@for $i from 1 through 12 {
+  .p-#{$i} {
+    padding: 0.5rem * $i;
+  }
+}
+
+// padding-y
+
+@for $i from 1 through 12 {
+  .py-#{$i} {
+    padding: 0.5rem * $i 0;
+  }
+}
+
+// margin
+
+@for $i from 1 through 12 {
+  .m-#{$i} {
+    margin: 0.5rem * $i;
+  }
+}
+
+// margin-y
+
+@for $i from 1 through 12 {
+  .my-#{$i} {
+    margin: 0.5rem * $i 0;
+  }
+}
